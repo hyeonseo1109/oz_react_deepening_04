@@ -10,7 +10,7 @@ const DATA = [
     { id: 2, title: '디자인 카드 1', description: '이것은 두 번째 카드의 설명입니다.', category: '디자인' },
     { id: 3, title: '기술 카드 2', description: '이것은 세 번째 카드의 설명입니다.', category: '기술' },
     { id: 4, title: '마케팅 카드 1', description: '이것은 네 번째 카드의 설명입니다.', category: '마케팅' },
-    { id: 5, title: '디자인 카드 2', description: '이것은 다섯 번째 카드의 설명입니다.', category: '디자인' },
+    { id: 5, title: '디자인 카드 2', description: '이것은 다섯 번째 카드의 메롱입니다.', category: '디자인' },
     { id: 6, title: '기술 카드 3', description: '이것은 여섯 번째 카드의 설명입니다.', category: '기술' },
 ];
 const CATEGORIES = ['전체', ...new Set(DATA.map((item) => item.category))];
@@ -24,7 +24,8 @@ export default function Home() {
         <main className="container">
             <h1>카드 렌더링</h1>
             <Filter categories={CATEGORIES} currentFilter={filterCategory} onFilterChange={setFilterCategory} />
-            <CardList data={filteredData} />
+            <CardList data={filteredData} />    
         </main>
+            //filteredData를 CardList.jsx에서 data라는 이름을 받겠다.
     );
 }
